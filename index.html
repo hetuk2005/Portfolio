@@ -22,8 +22,12 @@
         </nav>
         <div class="parent">
             <div class="child1">
-                <div class="rotating-ring"></div>
-                <img src="./Utils/My_Image.jpg" alt="My Image">
+                <div class="rotating_ring">
+                    <img src="../Utils/My_Image.jpg" alt="Background"
+                        class="bg-img" />
+                    <img src="../Utils/Ink_Video.gif" alt="GIF Mask"
+                        class="gif-overlay" />
+                </div>
             </div>
             <div class="child2">
                 <div class="text1">
@@ -55,4 +59,8 @@
             </div>
         </div>
     </body>
+    <script>
+        const gif = document.querySelector(".gif-overlay");
+gif.src = `../Utils/Ink_Video.gif?${Date.now()}`;
+    </script>
 </html>
