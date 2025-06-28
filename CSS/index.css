@@ -21,8 +21,8 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 100px;
-  padding: 15px 0;
+  gap: 90px;
+  padding: 15px 30px;
 }
 
 .ham {
@@ -79,6 +79,13 @@ h3::after {
 }
 
 .text,
+.text2 {
+  display: flex;
+  justify-content: left;
+  gap: 7px;
+  width: 50%;
+}
+
 .text1 {
   display: flex;
   gap: 7px;
