@@ -1,20 +1,21 @@
-@font-face {
-  font-family: "Algerian";
-  src: url("Algerian.ttf") format("truetype");
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Algerian", serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: normal;
 }
 
 body {
-  background-color: black;
+  background-color: #2a2a2a;
   color: whitesmoke;
   letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 nav {
@@ -34,27 +35,36 @@ h3 {
   font-size: 40px;
 }
 
+h5 {
+  margin: 20px 0;
+}
+
 ul {
   display: flex;
   list-style-type: none;
   gap: 50px;
 }
 
-ul > li {
+ul > li,
+ul > li > a {
   font-size: x-large;
   position: relative;
+  font-weight: 700;
 }
 
-ul > li:hover {
-  color: red;
+ul > li:hover,
+ul > li > a:hover {
+  color: #00ff00;
   scale: 1.05;
   transition: all 0.2s ease-in-out;
+  font-weight: 700;
   cursor: pointer;
 }
 
 ul > li::after,
 .red::after,
-h3::after {
+h3::after,
+.red_full::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -62,14 +72,15 @@ h3::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: #00ff00;
   transition: transform 0.3s ease-out;
   transform-origin: bottom center;
 }
 
 ul > li:hover:after,
 .red:hover::after,
-h3:hover::after {
+h3:hover::after,
+.red_full:hover::after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
@@ -84,6 +95,10 @@ h3::after {
   justify-content: left;
   gap: 7px;
   width: 50%;
+}
+
+.text2 {
+  width: 100%;
 }
 
 .text1 {
@@ -106,18 +121,31 @@ h3::after {
 }
 
 .red {
-  color: red;
+  color: #00ff00;
   position: relative;
+}
+
+.red:hover {
+  font-weight: 700;
+}
+
+.child1 {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 .rotating_ring {
   position: relative;
-  width: 510px;
-  height: 570px;
+  width: 450px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   /* animation: rotate 2s linear; */
-  box-shadow: 0 0 15px 5px red;
+  box-shadow: 0 0 30px #00ff00;
+  border: 5px solid #00ff00;
 }
 
 /* @keyframes rotate {
@@ -133,32 +161,17 @@ h3::after {
 } */
 
 .color-img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 2;
-  mask-image: url("../Utils/Ink_Video.gif");
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.bw-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
 }
 
 .images {
   display: flex;
   padding: 10px 20px;
+  margin: 50px 0;
+  justify-content: space-around;
   align-items: center;
-  gap: 50px;
 }
 
 .images > img {
@@ -168,17 +181,18 @@ h3::after {
   object-fit: contain;
   border: 4px solid;
   border-radius: 50%;
-  filter: invert(24%) sepia(91%) saturate(7474%) hue-rotate(357deg)
-    brightness(92%) contrast(118%);
+  filter: invert(67%) sepia(93%) saturate(6001%) hue-rotate(75deg)
+    brightness(141%) contrast(131%);
+  filter: drop-shadow(0 0 3px #00ff00);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .images > img:hover {
   transform: scale(1.05);
-  background-color: red;
+  background-color: #00ff00;
   filter: none;
-  border-color: black;
+  border-color: #000;
 }
 
 h4 {
@@ -189,21 +203,54 @@ h5 {
   font-size: 30px;
 }
 
-p {
+.About > p {
   margin: 10px 0;
   font-size: 17px;
+  opacity: 0.8;
+  color: whitesmoke;
 }
 
 button {
   width: 250px;
   height: 40px;
-  border: 1px solid red;
-  background-color: red;
+  border: 1px solid #00ff00;
+  background-color: #00ff00;
   border-radius: 7px;
   margin: 15px 40px;
   cursor: pointer;
   z-index: 0;
   position: relative;
+}
+
+.red_full {
+  color: #00ff00;
+  position: relative;
+  font-weight: 700;
+}
+
+.text3 {
+  position: relative;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+/* Underline animation */
+.text3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  transition: transform 0.3s ease-out;
+  transform-origin: bottom center;
+}
+
+.text3:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
 }
 
 /* button::after {
@@ -264,21 +311,57 @@ button:hover {
 button > p {
   position: relative;
   font-size: 25px;
-  letter-spacing: 3px;
-  line-height: 0.5em;
-  font-weight: normal;
-  /* color: transparent; */
-  /* font-family: "Times New Roman", Times, serif; */
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 1000;
 }
 
-button > p::after {
-  position: absolute;
-  inset: 0 0 0 0;
-  content: attr(data-content);
-  z-index: 2;
-  -webkit-text-stroke: 2px black;
+.skill {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill > .red {
+  display: inline-block;
+  position: relative;
+}
+
+.skill_flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item {
+  padding: 15px;
+  border-radius: 5px;
+  border: 3px solid #00ff00;
+  box-shadow: 0 0 5px #00ff00;
+  width: 150px;
+  height: 150px;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ff00;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.item > img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: invert(66%) sepia(92%) saturate(6000%) hue-rotate(75deg)
+    brightness(140%) contrast(130%);
+}
+
+.item > h5 {
+  font-size: larger;
+  font-weight: 700;
+  text-align: center;
 }
 
 @media (max-width: 320px) {
