@@ -146,8 +146,14 @@ h3::after {
   border-radius: 50%;
   overflow: hidden;
   /* animation: rotate 2s linear; */
+  cursor: not-allowed;
+  transition: all 0.3s ease-in-out;
+}
+
+.rotating_ring:hover {
   box-shadow: 0 0 30px #00ff00;
   border: 5px solid #00ff00;
+  transform: scale(1.05);
 }
 
 /* @keyframes rotate {
@@ -323,14 +329,16 @@ button > p {
 
 .skill,
 .contact,
-.education {
+.education,
+.portfolio {
   text-align: center;
   margin-bottom: 30px;
 }
 
 .skill > .red,
 .contact > .red,
-.education > .red {
+.education > .red,
+.portfolio > .red {
   display: inline-block;
   position: relative;
 }
@@ -351,11 +359,16 @@ button > p {
   height: 150px;
 }
 
-.item:hover {
+.item:hover,
+.card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px #00ff00;
+  box-shadow: 0 0 25px #00ff00;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.card:hover {
+  border: 3px solid #00ff00;
 }
 
 .item > img {
@@ -463,6 +476,110 @@ button > p {
   width: 15px;
   border-radius: 50%;
   border: 3px solid #00ff00;
+}
+
+.portfolio {
+  margin-bottom: 31px;
+}
+
+.card_parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  display: grid;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.card > .child1 {
+  display: grid;
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  border: 3px solid #000;
+  border-top: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover > .child1 {
+  border: 0;
+}
+
+.card > .child1 > h5 {
+  margin: 0;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.card:hover > .child1 > h5 {
+  color: #00ff00;
+}
+
+.card > .child1 > p {
+  font-size: 17px;
+}
+
+.card > img {
+  width: inherit;
+  height: 30vh;
+  object-fit: fill;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover > img {
+  width: 99.5%;
+}
+
+.button {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.css,
+.html {
+  text-align: center;
+  padding: 0;
+  width: 51px;
+  height: 31px;
+  transition: all 0.3s ease-in-out;
+}
+
+.phone,
+.gmail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 15px 100px;
+  gap: 11px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.phone > .red,
+.gmail > .red {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.phone > .red:hover,
+.gmail > .red:hover {
+  color: #00ff00;
 }
 
 @media (max-width: 320px) {
