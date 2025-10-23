@@ -360,14 +360,16 @@ button > p {
 }
 
 .item:hover,
-.card:hover {
+.card:hover,
+.card1:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px #00ff00;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.card:hover {
+.card:hover,
+.card1:hover {
   border: 3px solid #00ff00;
 }
 
@@ -487,10 +489,11 @@ button > p {
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 70%;
+  width: 100%;
 }
 
-.card {
+.card,
+.card1 {
   width: 400px;
   height: auto;
   display: grid;
@@ -499,7 +502,8 @@ button > p {
   margin-top: 25px;
 }
 
-.card > .child1 {
+.card > .child1,
+.card1 > .child1 {
   display: grid;
   gap: 30px;
   margin: 0;
@@ -512,38 +516,47 @@ button > p {
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover > .child1 {
+.card:hover > .child1,
+.card1:hover > .child1 {
   border: 0;
 }
 
-.card > .child1 > h5 {
+.card > .child1 > h5,
+.card1 > .child1 > h5 {
   margin: 0;
   color: #fff;
   margin-top: 15px;
 }
 
-.card:hover > .child1 > h5 {
+.card:hover > .child1 > h5,
+.card1:hover > .child1 > h5 {
   color: #00ff00;
 }
 
-.card > .child1 > p {
+.card > .child1 > p,
+.card1 > .child1 > p {
   font-size: 17px;
 }
 
-.card > img {
-  width: inherit;
+.card > img,
+.card1 > img {
+  width: 99.5%;
   height: 30vh;
   object-fit: fill;
+  border: 3px solid #000;
+  border-bottom: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover > img {
+/* .card:hover > img,
+.card1:hover > img {
   width: 99.5%;
-}
+} */
 
-.button {
+.button,
+.card1 > .child1 > .button {
   width: 40%;
   display: flex;
   justify-content: center;
@@ -551,8 +564,13 @@ button > p {
   margin: 0 15px;
 }
 
+.card1 > .child1 > .button {
+  width: 50%;
+}
+
 .css,
-.html {
+.html,
+.js {
   text-align: center;
   padding: 0;
   width: 51px;
