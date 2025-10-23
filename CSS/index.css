@@ -64,7 +64,8 @@ ul > li > a:hover {
 ul > li::after,
 .red::after,
 h3::after,
-.red_full::after {
+.red_full::after,
+.year > p::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -80,7 +81,8 @@ h3::after,
 ul > li:hover:after,
 .red:hover::after,
 h3:hover::after,
-.red_full:hover::after {
+.red_full:hover::after,
+.year > p:hover::after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
@@ -175,7 +177,7 @@ h3::after {
   align-items: center;
 }
 
-.images > img {
+.images > .tooltip > a > img {
   padding: 5px;
   height: 40px;
   width: 40px;
@@ -189,7 +191,7 @@ h3::after {
   cursor: pointer;
 }
 
-.images > img:hover {
+.images > .tooltip > a > img:hover {
   transform: scale(1.05);
   background-color: #00ff00;
   filter: none;
@@ -320,13 +322,15 @@ button > p {
 }
 
 .skill,
-.contact {
+.contact,
+.education {
   text-align: center;
   margin-bottom: 30px;
 }
 
 .skill > .red,
-.contact > .red {
+.contact > .red,
+.education > .red {
   display: inline-block;
   position: relative;
 }
@@ -369,6 +373,96 @@ button > p {
   font-size: larger;
   font-weight: 700;
   text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 130%;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 51%;
+  right: 100.5%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.degree {
+  border-left: 5px solid #000;
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.course,
+.college,
+.reason {
+  font-weight: 600;
+  padding: 15px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-size: large;
+}
+
+.college,
+.reason {
+  opacity: 0.7;
+}
+
+.reason > p {
+  text-transform: capitalize;
+}
+
+.year {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 23px;
+  margin-left: -40px;
+  z-index: 10;
+}
+
+.year > p {
+  letter-spacing: 0.5px;
+  font-size: large;
+  font-weight: 600;
+  position: relative;
+}
+
+.year > p:hover {
+  color: #00ff00;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #00ff00;
 }
 
 @media (max-width: 320px) {
