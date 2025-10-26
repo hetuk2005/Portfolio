@@ -600,167 +600,32 @@ button > p {
   color: #00ff00;
 }
 
-/* @media (max-width: 320px) {
-  .ham {
-    display: inline-block;
-  }
-  ul {
-    display: none;
-  }
-  nav {
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
-  .parent {
-    display: grid;
-    margin: 20px 10px;
-    padding: 0;
-    gap: 20px;
-  }
-  .rotating_ring {
-    width: 300px;
-    height: 330px;
-  }
-  .text1 {
-    display: grid;
-    justify-items: center;
-  }
-  .text {
-    justify-content: center;
-  }
-  .child2 > p {
-    text-align: center;
-    font-size: 10px;
-    padding: 0 5px;
-  }
-  a {
-    text-align: center;
-  }
-  button {
-    margin: 20px 0;
-    width: 100%;
-  }
-  .child1,
-  .child2 {
-    width: 100%;
-  }
-  .images {
-    gap: 30px;
-  }
-} */
-
-/* @media (min-width: 321px) and (max-width: 430px) {
-  .ham {
-    display: inline-block;
-  }
-  ul {
-    display: none;
-  }
-  nav {
-    width: 100%;
-    justify-content: center;
-    gap: 50px;
-    padding: 15px 25px;
-  }
-  .parent {
-    display: grid;
-    margin: 50px 20px;
-    padding: 0;
-    gap: 30px;
-  }
-  .text1 {
-    display: grid;
-    justify-items: center;
-  }
-  .text {
-    justify-content: center;
-  }
-  .child2 > p {
-    text-align: center;
-  }
-  a {
-    text-align: center;
-  }
-  button {
-    margin: 20px 0;
-    width: 100%;
-  }
-  .rotating_ring {
-    width: 340px;
-    height: 370px;
-  }
-  .child2,
-  .child1 {
-    width: 100%;
-  }
+.About > p {
+  text-transform: capitalize;
 }
-
-@media (min-width: 431px) and (max-width: 840px) {
-  .ham {
-    display: inline-block;
-  }
-  ul {
-    display: none;
-  }
-  nav {
-    width: 100%;
-    gap: 0;
-    justify-content: space-between;
-    padding: 20px 50px;
-  }
-  .parent {
-    display: grid;
-    margin: 50px 20px;
-    padding: 0;
-    gap: 30px;
-  }
-  .rotating_ring {
-    width: 630px;
-    height: 610px;
-  }
-  .text,
-  .text1,
-  .images {
-    justify-content: center;
-  }
-  .child2 > p {
-    text-align: center;
-  }
-  a {
-    text-align: center;
-  }
-  button {
-    margin: 20px 0;
-    width: 100%;
-  }
-} */
 
 @media (max-width: 320px) {
   nav {
-    flex-direction: column;
-    gap: 30px;
-    padding: 8px 10px;
+    gap: 45px;
+    padding: 10px 12px;
+    flex-direction: row-reverse;
   }
-
-  ul {
-    gap: 18px;
+  nav > ul {
+    display: none;
   }
-
-  ul > li,
-  ul > li > a {
-    font-size: medium;
+  .ham {
+    display: block;
   }
-
+  .text {
+    justify-content: space-between;
+  }
   h3 {
     font-size: 25px;
   }
-
   h4,
   h5 {
     font-size: 19px;
   }
-
   .parent,
   .child1 {
     gap: 25px;
@@ -768,55 +633,60 @@ button > p {
     padding: 0 10px;
     margin: 10px 0;
   }
-
   .rotating_ring {
     width: 200px;
     height: 210px;
   }
-
-  .images {
-    flex-direction: column;
-    gap: 15px;
-    padding: 8px 5px;
-    margin: 10px 0;
+  .text1,
+  .text2 {
+    justify-content: center;
   }
-
+  .About > p {
+    text-align: center;
+  }
+  .images {
+    overflow: hidden;
+    padding: 8px 5px;
+    margin: 10px auto;
+  }
   .images > .tooltip > a > img {
     height: 27px;
     width: 27px;
   }
-
   button {
     width: 130px;
     height: 30px;
-    font-size: 13px;
-    margin: 8px auto;
+    display: block;
+    margin: 20px auto;
   }
-
   button > p {
-    font-size: 15px;
+    font-size: 17px;
   }
-
   .skill_flex {
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px;
+    justify-items: center;
+    align-content: center;
+    margin-bottom: 20px;
   }
-
   .item {
-    width: 82px;
-    height: 82px;
-    padding: 7px;
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+  }
+  .item > h5 {
+    margin: 11px 9px;
+    font-size: 13px;
   }
   .item > img {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
   }
-
   .degree {
     width: 100%;
-    padding: 0 5px;
-    border-left: 3px solid #000;
+    padding: 0 21px;
+    border-left: 0;
   }
   .year {
     gap: 8px;
@@ -829,12 +699,20 @@ button > p {
   }
   .card,
   .card1 {
-    width: 90vw;
-    min-width: 145px;
+    width: 80%;
   }
   .card > img,
   .card1 > img {
-    height: 80px;
+    height: 150px;
+  }
+  .button {
+    gap: 15px;
+    width: 50%;
+    margin: auto;
+  }
+  .card1 > .child1 > .button {
+    width: 80%;
+    margin: auto;
   }
   .phone,
   .gmail {
@@ -886,10 +764,9 @@ button > p {
     text-align: center;
   }
   .images {
-    flex-direction: column;
-    gap: 19px;
     padding: 10px 7px;
     margin: 13px 0;
+    overflow: hidden;
   }
   .images > .tooltip > a > img {
     height: 34px;
@@ -905,10 +782,12 @@ button > p {
   button > p {
     font-size: 17px;
   }
-
   .skill_flex {
-    flex-direction: column;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px;
+    justify-items: center;
+    align-content: center;
     margin-bottom: 20px;
   }
 
@@ -941,12 +820,12 @@ button > p {
   }
   .card,
   .card1 {
-    width: 96vw;
-    min-width: 180px;
+    width: 80%;
   }
   .card > img,
   .card1 > img {
-    height: 40vh;
+    height: 35vh;
+    object-fit: fill;
   }
   .phone,
   .gmail {
