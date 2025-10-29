@@ -390,41 +390,6 @@ button > p {
   text-align: center;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 5px;
-  left: 130%;
-}
-
-.tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 51%;
-  right: 100.5%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent black transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
 .degree {
   border-left: 5px solid #000;
   width: 50%;
@@ -578,30 +543,23 @@ button > p {
   transition: all 0.3s ease-in-out;
 }
 
-.phone,
-.gmail {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin: 15px 100px;
-  gap: 11px;
-  font-size: 21px;
-  font-weight: 700;
-}
-
-.phone > .red,
-.gmail > .red {
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-
-.phone > .red:hover,
-.gmail > .red:hover {
-  color: #00ff00;
-}
-
 .About > p {
   text-transform: capitalize;
+}
+
+.contact_parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact_child1 > h5 {
+  text-align: left;
+}
+
+.contact_child1 > p {
+  width: 50%;
+  text-align: left;
 }
 
 @media (max-width: 320px) {
@@ -715,12 +673,6 @@ button > p {
     width: 80%;
     margin: auto;
   }
-  .phone,
-  .gmail {
-    font-size: 15px;
-    margin: 8px 10px;
-    gap: 5px;
-  }
 }
 
 @media (min-width: 321px) and (max-width: 430px) {
@@ -826,12 +778,6 @@ button > p {
   .card1 > img {
     height: 35vh;
     object-fit: fill;
-  }
-  .phone,
-  .gmail {
-    font-size: 18px;
-    margin: 11px 15px;
-    gap: 7px;
   }
   .button {
     margin: auto;
@@ -952,11 +898,5 @@ button > p {
   .card1 > .child1 > .button {
     width: 100%;
     margin: auto;
-  }
-  .phone,
-  .gmail {
-    font-size: 21px;
-    margin: 15px 21px;
-    gap: 9px;
   }
 }
