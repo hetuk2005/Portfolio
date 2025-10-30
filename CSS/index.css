@@ -553,7 +553,8 @@ button > p {
   align-items: center;
 }
 
-.contact_child1 > h5 {
+.contact_child1 > h5,
+.address_child > h5 {
   text-align: left;
 }
 
