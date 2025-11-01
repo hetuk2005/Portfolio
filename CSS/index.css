@@ -549,8 +549,12 @@ button > p {
 
 .contact_parent {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+
+.contact_child1 {
+  width: 51%;
 }
 
 .contact_child1 > h5,
@@ -615,6 +619,31 @@ button > p {
   align-items: center;
   margin: 41px 35px;
   gap: 11px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact_name > input,
+form > input {
+  padding: 15px;
+  background-color: inherit;
+  border-radius: 15px;
+  border: inherit;
+  text-transform: uppercase;
+}
+
+#message {
+  text-transform: uppercase;
+  height: 110px;
+  padding: 15px;
+  border-radius: 15px;
+  border: inherit;
+  background-color: inherit;
+  color: gray;
 }
 
 @media (max-width: 320px) {
