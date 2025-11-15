@@ -5,6 +5,7 @@
 }
 
 .hero_slider {
+  /* text-decoration: ; */
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -46,18 +47,18 @@
 }
 
 .arrow {
+  background-color: transparent;
   position: absolute;
   top: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
+  border: 1px solid gold;
   font-size: 30px;
-  color: #fff;
   padding: 5px 15px;
   cursor: pointer;
   transform: translateY(-50%) rotate(45deg);
 }
 
 .arrow > p {
+  color: #fff;
   font-size: 25px;
   transform: rotate(-45deg);
 }
