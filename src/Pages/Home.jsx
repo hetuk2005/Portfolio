@@ -6,19 +6,19 @@ import { Astronaut } from "../Components/Astronaut";
 export const Home = () => {
   return (
     <div style={{ height: "100vh", background: "#000" }}>
-      <Canvas camera={{ position: [0, 1.5, 5], fov: 50 }}>
+      <Canvas camera={{ position: [0, 1, 8], fov: 45 }}>
         {/* Lights */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
 
         {/* Space Background */}
-        <Stars radius={100} depth={50} count={5000} factor={4} />
+        <Stars radius={100} depth={50} count={5000} factor={5} />
 
         {/* Astronaut */}
         <Astronaut />
 
         {/* Mouse Controls */}
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
       </Canvas>
     </div>
   );

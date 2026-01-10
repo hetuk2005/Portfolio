@@ -13,5 +13,13 @@ export const Astronaut = () => {
     }
   });
 
-  return <primitive ref={ref} object={scene} scale={2} position={[0, -1, 0]} />;
+  return (
+    <primitive
+      ref={ref}
+      object={scene}
+      scale={1.5}
+      position={[0, -1.5, 0]}
+      rotation={[0, Math.PI, 0]}
+    />
+  );
 };
