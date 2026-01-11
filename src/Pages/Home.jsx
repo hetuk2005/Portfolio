@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Astronaut } from "../Components/Astronaut";
+import { Typewriter } from "react-simple-typewriter";
+import { Camera } from "../Components/Camera";
 
 export const Home = () => {
-  const cameraRef = useRef();
   const [zoom, setZoom] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
@@ -13,18 +14,6 @@ export const Home = () => {
     // cameraRef.current.position.z = 3;
     setZoom(true);
   };
-
-  useFrame(() => {
-    if (zoom && cameraRef.current) {
-      cameraRef.current.position.z -= 0.05;
-
-      if (cameraRef.current.position.z <= 3) {
-        cameraRef.current.position.z = 3;
-        setZoom(false);
-        setShowProfile(true);
-      }
-    }
-  });
 
   return (
     <div style={{ height: "100vh", background: "#000" }}>
@@ -40,7 +29,10 @@ export const Home = () => {
           }}
         >
           <button
-            onClick={() => setShowProfile(false)}
+            onClick={() => {
+              setShowProfile(false);
+              setZoom(false);
+            }}
             style={{
               position: "absolute",
               top: "31px",
@@ -76,16 +68,22 @@ export const Home = () => {
               letterSpacing: "2px",
             }}
           >
-            <h2 style={{ fontSize: "35px", fontWeight: "700" }}>HETUK PATEL</h2>
-            <p
+            <h2
               style={{
-                fontSize: "27px",
+                fontSize: "35px",
                 fontWeight: "700",
                 textTransform: "uppercase",
               }}
             >
-              Frontend Developer
-            </p>
+              <Typewriter
+                words={["hetuk patel", "forntend developer", "creative coder"]}
+                loop
+                cursor
+                typeSpeed={81}
+                deleteSpeed={41}
+                delaySpeed={1001}
+              />
+            </h2>
           </div>
         </div>
       )}
@@ -104,6 +102,14 @@ export const Home = () => {
 
           {/* Mouse Controls */}
           <OrbitControls enableZoom={true} minDistance={4} maxDistance={10} />
+
+          <Camera
+            zoom={zoom}
+            onFinish={() => {
+              setZoom(false);
+              setShowProfile(true);
+            }}
+          />
         </Canvas>
       )}
     </div>
