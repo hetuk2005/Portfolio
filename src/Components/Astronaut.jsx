@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-export const Astronaut = (onClick) => {
+export const Astronaut = ({ onClick }) => {
   const ref = useRef();
   const { scene } = useGLTF("/astronaut.glb");
   const baseY = -1;
@@ -30,6 +30,9 @@ export const Astronaut = (onClick) => {
       position={[0, -1.1, 0]}
       rotation={[0, Math.PI, 0]}
       onClick={onClick}
+      // Cursor Pointer
+      onPointerOver={() => (document.body.style.cursor = "pointer")}
+      onPointerOut={() => (document.body.style.cursor = "default")}
     />
   );
 };
