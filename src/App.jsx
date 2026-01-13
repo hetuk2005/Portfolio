@@ -12,10 +12,10 @@ function App() {
 
   return (
     <>
-      {page === "home" && <Home />}
-      {page === "about" && <About />}
-      {page === "projects" && <Projects />}
-      {page === "contact" && <Contact />}
+      {page === "home" && <Home setPage={setPage} />}
+      {page === "about" && <About setPage={setPage} />}
+      {page === "projects" && <Projects setPage={setPage} />}
+      {page === "contact" && <Contact setPage={setPage} />}
 
       {/* Navbar */}
       <div style={{ position: "fixed", bottom: 20, left: 20 }}>

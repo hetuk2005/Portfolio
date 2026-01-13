@@ -1,25 +1,30 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
 
-export const Planet = ({ position, color, onClick }) => {
-  const ref = useRef();
+export const Planet = ({ model, distance, speed = 0.3, tilt = 0, onClick }) => {
+  const group = useRef();
+  const planet = useRef();
+  const { scene } = useGLTF(model);
 
   useFrame(() => {
-    ref.current.rotation.y += 0.002;
+    group.current.rotation.y += speed * 0.003;
+    planet.current.rotation.y += 0.01;
   });
 
   return (
     <>
-      <mesh
-        ref={ref}
-        position={position}
-        onClick={onClick}
-        onPointerOver={() => (document.body.style.cursor = "pointer")}
-        onPointerOut={() => (document.body.style.cursor = "default")}
-      >
-        <sphereGeometry args={[0.5, 33, 33]} />
-        <meshStandardMaterial color={color} emissive={color} />
-      </mesh>
+      <group ref={group} rotation={[0, 0, tilt]}>
+        <primitive
+          ref={planet}
+          object={scene}
+          scale={0.5}
+          position={[distance, 0, 0]}
+          onClick={onClick}
+          onPointerOver={() => (document.body.style.cursor = "pointer")}
+          onPointerOut={() => (document.body.style.cursor = "default")}
+        />
+      </group>
     </>
   );
 };

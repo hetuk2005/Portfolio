@@ -19,8 +19,10 @@ export const Home = ({ setPage }) => {
   const [zoom, setZoom] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [transition, setTransition] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [nextPage, setNextPage] = useState(null);
 
+  // eslint-disable-next-line no-unused-vars
   const startTransition = (page) => {
     setNextPage(page);
     setTransition(true);
@@ -245,7 +247,7 @@ export const Home = ({ setPage }) => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              gap: "51px",
+              gap: "15px",
             }}
           >
             <h2
