@@ -9,6 +9,8 @@ export const Astronaut = ({ onClick }) => {
 
   // Slow Floating Rotation
   useFrame((state) => {
+    if (window.innerWidth < 768) return;
+
     const time = state.clock.getElapsedTime();
 
     // Floating Up & Down

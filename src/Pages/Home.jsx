@@ -4,11 +4,13 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Astronaut } from "../Components/Astronaut";
 import { Camera } from "../Components/Camera";
+import { Planet } from "../Components/Planet";
+import { CamerRig } from "../Components/CameraRig";
 
 const nameText = "HETUK PATEL";
 const roles = ["FRONTEND DEVELOPER", "CREATIVE CODER"];
 
-export const Home = () => {
+export const Home = ({ setPage }) => {
   const [displayRole, setDisplayRole] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [charIndex, setCharIndex] = useState(0);
@@ -16,6 +18,13 @@ export const Home = () => {
   const [phase, setPhase] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [transition, setTransition] = useState(false);
+  const [nextPage, setNextPage] = useState(null);
+
+  const startTransition = (page) => {
+    setNextPage(page);
+    setTransition(true);
+  };
 
   const handleAstronaut = () => {
     // setShowProfile(true);
@@ -128,10 +137,44 @@ export const Home = () => {
           <directionalLight position={[5, 5, 5]} intensity={1} />
 
           {/* Space Background */}
-          <Stars radius={100} depth={50} count={7000} factor={5} speed={1} />
+          <Stars
+            radius={100}
+            depth={50}
+            count={window.innerWidth < 767 ? 2000 : 7000}
+            factor={5}
+            speed={1}
+          />
 
           {/* Astronaut */}
           <Astronaut onClick={handleAstronaut} />
+
+          <CamerRig
+            active={transition}
+            targetZ={2}
+            zoom={zoom}
+            onZoomComplete={() => {
+              setShowProfile(true);
+            }}
+          />
+
+          {/* Planets */}
+          <Planet
+            position={[-2, 0, -2]}
+            color="#4fd1ff"
+            onClick={() => setPage("about")}
+          />
+
+          <Planet
+            position={[0, -1.5, -2]}
+            color="#9aff9a"
+            onClick={() => setPage("contact")}
+          />
+
+          <Planet
+            position={[2, 0, -2]}
+            color="#ff9f43"
+            onClick={() => setPage("projects")}
+          />
 
           {/* Mouse Controls */}
           <OrbitControls enableZoom={true} minDistance={4} maxDistance={10} />
