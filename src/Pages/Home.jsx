@@ -4,8 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Astronaut } from "../Components/Astronaut";
 import { Camera } from "../Components/Camera";
-import { Planet } from "../Components/Planet";
-import { CamerRig } from "../Components/CameraRig";
+import { SolarSystem } from "../Components/SolarSystem";
 
 const nameText = "HETUK PATEL";
 const roles = ["FRONTEND DEVELOPER", "CREATIVE CODER"];
@@ -18,15 +17,6 @@ export const Home = ({ setPage }) => {
   const [phase, setPhase] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
-  const [transition, setTransition] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const [nextPage, setNextPage] = useState(null);
-
-  // eslint-disable-next-line no-unused-vars
-  const startTransition = (page) => {
-    setNextPage(page);
-    setTransition(true);
-  };
 
   const handleAstronaut = () => {
     // setShowProfile(true);
@@ -150,36 +140,11 @@ export const Home = ({ setPage }) => {
           {/* Astronaut */}
           <Astronaut onClick={handleAstronaut} />
 
-          <CamerRig
-            active={transition}
-            targetZ={2}
-            zoom={zoom}
-            onZoomComplete={() => {
-              setShowProfile(true);
-            }}
-          />
-
-          {/* Planets */}
-          <Planet
-            position={[-2, 0, -2]}
-            color="#4fd1ff"
-            onClick={() => setPage("about")}
-          />
-
-          <Planet
-            position={[0, -1.5, -2]}
-            color="#9aff9a"
-            onClick={() => setPage("contact")}
-          />
-
-          <Planet
-            position={[2, 0, -2]}
-            color="#ff9f43"
-            onClick={() => setPage("projects")}
-          />
+          {/* SolarSystem */}
+          <SolarSystem onPlanetClick={setPage} />
 
           {/* Mouse Controls */}
-          <OrbitControls enableZoom={true} minDistance={4} maxDistance={10} />
+          <OrbitControls enableZoom={true} minDistance={3} maxDistance={10} />
 
           <Camera
             zoom={zoom}

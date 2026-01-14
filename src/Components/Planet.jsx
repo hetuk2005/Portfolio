@@ -2,7 +2,14 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-export const Planet = ({ model, distance, speed = 0.3, tilt = 0, onClick }) => {
+export const Planet = ({
+  model,
+  distance,
+  scale = 0.5,
+  speed = 0.3,
+  tilt = 0,
+  onClick,
+}) => {
   const group = useRef();
   const planet = useRef();
   const { scene } = useGLTF(model);
@@ -18,7 +25,7 @@ export const Planet = ({ model, distance, speed = 0.3, tilt = 0, onClick }) => {
         <primitive
           ref={planet}
           object={scene}
-          scale={0.5}
+          scale={scale}
           position={[distance, 0, 0]}
           onClick={onClick}
           onPointerOver={() => (document.body.style.cursor = "pointer")}
