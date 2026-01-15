@@ -17,6 +17,7 @@ export const Home = ({ setPage }) => {
   const [phase, setPhase] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  // const [cameraTarget, setCameraTarget] = useState(null);
 
   const handleAstronaut = () => {
     // setShowProfile(true);
@@ -153,6 +154,7 @@ export const Home = ({ setPage }) => {
               setShowProfile(true);
             }}
           />
+          {/* <CameraRig target={cameraTarget} /> */}
         </Canvas>
       )}
 
