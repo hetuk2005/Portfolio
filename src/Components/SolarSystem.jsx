@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Orbit } from "./Orbit";
 import { Planet } from "./Planet";
 import { Astronaut } from "./Astronaut";
