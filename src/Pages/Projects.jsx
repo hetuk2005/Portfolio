@@ -1,9 +1,67 @@
 import React from "react";
 
+import "../App.css";
+
 export const Projects = () => {
   return (
     <>
-      <h2>Projects Page</h2>
+      <section className="section06">
+        <div className="card_container">
+          {/* Card 01 */}
+
+          <div className="card_box_1">
+            <div className="card">
+              <img src="/anime_Website_Screenshot.png" alt="Website 1" />
+              <div className="card_info">
+                <h1>Title</h1>
+                <h3>Description</h3>
+                <button className="card_btn">View Project</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 02 */}
+
+          <div className="card_box_2">
+            <div className="card">
+              <img src="/chai_Point_Screenshot.png" alt="Website 2" />
+              <div className="card_info">
+                <h1>Title</h1>
+                <h3>Description</h3>
+                <button className="card_btn">View Project</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 03 */}
+
+          <div className="card_box_1">
+            <div className="card">
+              <img src="hetuk_restaurant.png" alt="Website 2" />
+              <div className="card_info">
+                <h1>Title</h1>
+                <h3>Description</h3>
+                <button className="card_btn">View Project</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 03 */}
+
+          <div className="card_box_1">
+            <div className="card">
+              <img src="hetuk_restaurant.png" alt="Website 2" />
+              <div className="card_info">
+                <h1>Title</h1>
+                <h3>Description</h3>
+                <button className="card_btn">View Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button className="home">Back To Home </button>
     </>
   );
 };

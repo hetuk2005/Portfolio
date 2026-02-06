@@ -10,6 +10,144 @@ body {
   color: #fff;
 }
 
+.section06 {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2.5rem 0;
+}
+
+.section06 .card_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.section06 .card_container .card_box_1,
+.card_box_2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.section06 .card_container .card {
+  width: 100%;
+  height: 17rem;
+  display: flex;
+  border-radius: 11px;
+  transform: skewX(13deg);
+  box-shadow: 0px 3px 7px 3px #f0f0f0;
+}
+
+.section06 .card_container .card:hover {
+  box-shadow: 0 7px 13px 0 #f1b555;
+}
+
+.section06 .card_container .card img {
+  width: 100%;
+  position: relative;
+  height: 17rem;
+  z-index: 1;
+  animation: remove-card 0.3s backwards linear;
+  border-radius: 11px;
+  object-fit: cover;
+}
+
+@keyframes remove-card {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.section06 .card_container .card:hover img {
+  animation: Dining-card 0.3s forwards linear;
+}
+
+@keyframes Dining-card {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.section06 .card_container .card .card_info {
+  width: 50%;
+  height: 17rem;
+  position: absolute;
+  right: 0%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background-color: whitesmoke;
+  border-radius: 0px 11px 11px 0px;
+}
+
+.section06 .card_container .card .card_info h3 {
+  color: #000;
+  font-style: italic;
+}
+
+.section06 .card_container .card .card_info h1,
+.review i {
+  font-style: italic;
+  color: #f1b555;
+}
+
+.section06 .card_container .card .card_info .card_btn {
+  padding: 9px 19px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: #000;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  box-shadow: 0px 3px 5px 3px #f1b555;
+  transition: all 0.3s ease-in-out;
+}
+
+.home {
+  width: 21%;
+  display: block;
+  margin: 21px auto;
+  padding: 9px 19px;
+  margin-top: 1rem;
+  border-radius: 7px;
+  color: #000;
+  font-size: 21px;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  background-color: #f1b555;
+  box-shadow: 0px 3px 5px 3px #f0f0f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.section06 .card_container .card .card_info .card_btn:hover,
+.home:hover {
+  background-color: #f1b555;
+  color: #000;
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.home:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 3px 5px 3px #f1b555;
+}
+
 @media (max-width: 430px) {
   .profile_div {
     flex-direction: column;
