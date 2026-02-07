@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
 }
 
 body {
+  font-family: "Times New Roman", Times, serif;
   background: black;
   color: #fff;
 }
@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .section06 .card_container {
@@ -36,8 +36,8 @@ body {
   width: 100%;
   height: 17rem;
   display: flex;
+  position: relative;
   border-radius: 11px;
-  transform: skewX(13deg);
   box-shadow: 0px 3px 7px 3px #f0f0f0;
 }
 
@@ -146,6 +146,23 @@ body {
   background-color: #fff;
   color: #000;
   box-shadow: 0px 3px 5px 3px #f1b555;
+}
+
+.navbar > button {
+  cursor: pointer;
+  padding: 5px 11px;
+  border: 0;
+  box-shadow: 0px 3px 5px 3px #f1b555;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar > button:hover {
+  background-color: #f1b555;
+  box-shadow: 0px 3px 5px 3px #fff;
 }
 
 @media (max-width: 430px) {

@@ -18,25 +18,20 @@ function App() {
       {page === "contact" && <Contact setPage={setPage} />}
 
       {/* Navbar */}
-      <div style={{ position: "fixed", bottom: 20, left: 20 }}>
-        <button onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
-          Home
-        </button>
-        <button onClick={() => setPage("about")} style={{ cursor: "pointer" }}>
-          About
-        </button>
-        <button
-          onClick={() => setPage("projects")}
-          style={{ cursor: "pointer" }}
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => setPage("contact")}
-          style={{ cursor: "pointer" }}
-        >
-          Contact
-        </button>
+      <div
+        style={{
+          position: "fixed",
+          top: "31px",
+          left: "51px",
+          display: "flex",
+          gap: "21px",
+        }}
+        className="navbar"
+      >
+        <button onClick={() => setPage("home")}>Home</button>
+        <button onClick={() => setPage("about")}>About</button>
+        <button onClick={() => setPage("projects")}>Projects</button>
+        <button onClick={() => setPage("contact")}>Contact</button>
       </div>
     </>
   );

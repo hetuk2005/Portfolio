@@ -5,6 +5,17 @@ import "../App.css";
 export const Projects = () => {
   return (
     <>
+      <h1
+        style={{
+          textAlign: "center",
+          margin: "51px 21px",
+          letterSpacing: "1.5px",
+          fontSize: "41px",
+          color: "#f1b555",
+        }}
+      >
+        My Projects
+      </h1>
       <section className="section06">
         <div className="card_container">
           {/* Card 01 */}
