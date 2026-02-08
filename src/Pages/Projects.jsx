@@ -2,7 +2,7 @@ import React from "react";
 
 import "../App.css";
 
-export const Projects = () => {
+export const Projects = ({ setPage }) => {
   return (
     <>
       <h1
@@ -72,7 +72,9 @@ export const Projects = () => {
         </div>
       </section>
 
-      <button className="home">Back To Home </button>
+      <button className="home" onClick={() => setPage("home")}>
+        Back To Home
+      </button>
     </>
   );
 };
