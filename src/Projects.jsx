@@ -24,7 +24,7 @@ export const Projects = ({ setPage }) => {
             <div className="card">
               <img src="/anime_Website_Screenshot.png" alt="Website 1" />
               <div className="card_info">
-                <h1>Hetuk Anime Website</h1>
+                <h1>Title</h1>
                 <h3>Description</h3>
                 <button className="card_btn">View Project</button>
               </div>
@@ -37,7 +37,7 @@ export const Projects = ({ setPage }) => {
             <div className="card">
               <img src="/chai_Point_Screenshot.png" alt="Website 2" />
               <div className="card_info">
-                <h1>Hetuk Chai Point Website</h1>
+                <h1>Title</h1>
                 <h3>Description</h3>
                 <button className="card_btn">View Project</button>
               </div>
@@ -50,7 +50,7 @@ export const Projects = ({ setPage }) => {
             <div className="card">
               <img src="hetuk_restaurant.png" alt="Website 2" />
               <div className="card_info">
-                <h1>Hetuk Restaurant Website</h1>
+                <h1>Title</h1>
                 <h3>Description</h3>
                 <button className="card_btn">View Project</button>
               </div>
