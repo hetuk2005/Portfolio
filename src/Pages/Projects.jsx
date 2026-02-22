@@ -26,9 +26,9 @@ export const Projects = ({ setPage }) => {
               <div className="card_info">
                 <h1>Hetuk Anime Website</h1>
                 <h3>
-                  Description: The Anime Website project showcases <br /> anime
-                  series and information in a visually appealing <br /> format
-                  for fans to explore and enjoy.
+                  Description: The Anime Website project showcases anime series
+                  and information in a visually appealing format for fans to
+                  explore and enjoy.
                 </h3>
                 <button className="card_btn">View Project</button>
               </div>
@@ -43,9 +43,9 @@ export const Projects = ({ setPage }) => {
               <div className="card_info">
                 <h1>Hetuk Chai Point Website</h1>
                 <h3>
-                  Description: The Hetuk Chai Point website is a <br />
-                  creative tea point portfolio project, likely designed to
-                  <br /> present tea products with a modern web interface.
+                  Description: The Hetuk Chai Point website is a creative tea
+                  point portfolio project, likely designed to present tea
+                  products with a modern web interface.
                 </h3>
                 <button className="card_btn">View Project</button>
               </div>
@@ -59,14 +59,15 @@ export const Projects = ({ setPage }) => {
               <img src="hetuk_restaurant.png" alt="Website 2" />
               <div className="card_info">
                 <h1>Hetuk Restaurant Website</h1>
-                <h3>
-                  Description: The Hetuk Restaurant Website showcases a<br />
-                  premium fine-dining experience with an <br />
-                  elegant interface and rich visual presentation. <br />
-                  It allows users to explore curated <br />
-                  menus, filter dishes seamlessly, and enjoy a smooth, <br />
-                  real-world restaurant browsing experience.
-                </h3>
+                <h4>
+                  <b>
+                    Description: The Hetuk Restaurant Website presents a premium
+                    fine-dining experience with an elegant design and rich
+                    visuals. Users can explore curated menus, filter dishes
+                    easily, and enjoy a smooth, real-world restaurant-style
+                    browsing experience.
+                  </b>
+                </h4>
                 <button className="card_btn">View Project</button>
               </div>
             </div>
