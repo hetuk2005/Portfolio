@@ -7,7 +7,9 @@ function App() {
       <div className="background"></div>
       <div className="background1"></div>
       <div className="background2"></div>
-      <Home />
+      <div className="glass">
+        <Home />
+      </div>
     </>
   );
 }
