@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 35% 0%,
+            #a52bc0 0%,
+            transparent 45%),
+        radial-gradient(ellipse at 100% 5%,
+            #526bc5 0%,
+            transparent 40%),
+        radial-gradient(ellipse at 0% 100%,
+            #26adb5 0%,
+            transparent 45%),
+        linear-gradient(135deg,
+            #537bc9 0%,
+            #37c5a5 100%);
+}
+
+.background {
+    background-image: url("/BG1.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    height: 27rem;
+    width: 27rem;
+}
+
+.background1 {
+    background-image: url("/BG2(Heart).svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 9rem;
+    top: 13rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+.background2 {
+    background-image: url("/BG3.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 8rem;
+    bottom: 8rem;
+    height: 4rem;
+    width: 4rem;
+}

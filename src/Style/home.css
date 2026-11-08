@@ -1,0 +1,120 @@
+.glass {
+    background: rgba(252, 232, 232, 0.3);
+    border: 1.5px solid white;
+    width: 63rem;
+    height: 77vh;
+    border-radius: 1.2rem;
+    backdrop-filter: blur(0);
+    box-shadow: 0 9px 31px rgba(21, 21, 61, 0.3);
+    margin: auto;
+    padding: 2.3rem 3rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Navbar */
+
+.navbar,
+.navbar>.list {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    gap: 5rem;
+    letter-spacing: 0.1rem;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.navbar {
+    height: 9vh;
+    align-items: center;
+}
+
+.list>ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+.point {
+    color: #fff;
+}
+
+.hire_me>button {
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border-radius: 7px;
+    padding: 0.4rem 1.5rem;
+    border: 1px transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hire_me>button:hover {
+    box-shadow: 0 0 19px 5px rgba(110, 19, 255, 0.55);
+}
+
+/* Content */
+
+.home_content {
+    letter-spacing: 0.1rem;
+    padding: 2.5rem 1rem;
+
+}
+
+.hello,
+.name {
+    font-size: 4.8rem;
+}
+
+.name {
+    color: #DE7327;
+}
+
+.home_content>p {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.home_content>button {
+    letter-spacing: 0.1rem;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 3.5rem;
+    border-radius: 17px;
+    border: 1px transparent;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.home_content>button:hover {
+    box-shadow: 0 0 19px 5px rgba(110, 19, 255, 0.55);
+}
+
+/* Person Image */
+
+.person {
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+.img_ring,
+.img_person {
+    width: 27rem;
+    height: 27rem;
+    object-fit: contain;
+    position: absolute;
+    left: 57%;
+    bottom: 105%;
+}
+
+.img_ring {
+    left: 55%;
+    z-index: 999;
+}
