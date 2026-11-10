@@ -1,0 +1,140 @@
+.theme-switcher {
+    --switcher-border: 1px solid rgba(255, 255, 255, 0.75);
+    --switcher-radius: 1rem;
+    --switcher-bg: rgba(255, 255, 255, 0.9);
+    --switcher-shadow: 0 13px 35px rgba(19, 28, 55, 0.22);
+    --switcher-blur: 11px;
+    --switcher-text: #182238;
+    --switcher-button-border: 1px solid rgba(255, 255, 255, 0.72);
+    --switcher-button-radius: 0.75rem;
+    --switcher-button-bg: rgba(255, 255, 255, 0.92);
+    --switcher-button-shadow: 0 3px 10px rgba(25, 35, 65, 0.08);
+    --theme-accent: #de7327;
+    --theme-accent-contrast: #fff;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.theme-switcher__menu {
+    padding: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    border: var(--switcher-border);
+    border-radius: var(--switcher-radius);
+    background: rgba(252, 232, 232, 0.3);
+    color: var(--switcher-text);
+    box-shadow: var(--switcher-shadow);
+    backdrop-filter: blur(var(--switcher-blur));
+    -webkit-backdrop-filter: blur(var(--switcher-blur));
+}
+
+.theme-switcher__menu[hidden] {
+    display: none;
+}
+
+.theme-switcher__toggle,
+.theme-switcher__option {
+    border: var(--switcher-button-border);
+    border-radius: var(--switcher-button-radius);
+    background: rgba(252, 232, 232, 0.3);
+    box-shadow: var(--switcher-button-shadow);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 161ms ease, background-color 181ms ease,
+        color 181ms ease, box-shadow 181ms ease;
+}
+
+.theme-switcher__toggle:hover,
+.theme-switcher__option:hover {
+    transform: translateY(-3px);
+}
+
+.theme-switcher__toggle:focus-visible,
+.theme-switcher__option:focus-visible {
+    outline: 3px solid var(--theme-accent);
+    outline-offset: 3px;
+}
+
+.theme-switcher__toggle {
+    min-height: 3.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.75rem 1rem;
+}
+
+.theme-switcher__spark {
+    color: var(--theme-accent);
+    font-size: 1.15rem;
+}
+
+.theme-switcher__indicator {
+    margin-left: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.theme-switcher__option {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-size: 0.89rem;
+}
+
+.theme-switcher__option.is-active {
+    background: var(--theme-accent);
+    color: var(--theme-accent-contrast);
+    border-color: transparent;
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--theme-accent) 35%, transparent);
+}
+
+@media (max-width: 520px) {
+    .theme-switcher {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .theme-switcher__menu {
+        width: min(21rem, calc(100vw - 2rem));
+    }
+}
+
+/* Neumorphism Theme Switcher */
+
+.portfolio-app[data-theme="neumorphism"] .theme-switcher {
+    --switcher-border: none;
+    --switcher-bg: #e7e8f6;
+    --switcher-shadow:
+        9px 9px 17px #c5c6d5,
+        -9px -9px 17px #ffffff;
+
+    --switcher-blur: 0px;
+    --switcher-text: #414365;
+
+    --switcher-button-border: none;
+    --switcher-button-bg: #e7e8f6;
+    --switcher-button-shadow:
+        5px 5px 10px #c5c6d5,
+        -5px -5px 10px #ffffff;
+
+    --theme-accent: #8060dc;
+}
+
+.portfolio-app[data-theme="neumorphism"] .theme-switcher__option.is-active {
+    background: #8060dc;
+    color: #ffffff;
+    box-shadow:
+        inset 3px 3px 7px rgba(65, 45, 130, 0.3),
+        inset -3px -3px 7px rgba(180, 155, 255, 0.3);
+}

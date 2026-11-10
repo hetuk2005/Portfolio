@@ -3,7 +3,8 @@ import "../Style/home.css";
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <img src="/Logo.png" alt="Logo" className="img_logo" />
+      <img src="/Logo.png" alt="Logo" className="img_logo logo-glass" />
+      <img src="/Logo(Neu).png" alt="Logo" className="img_logo logo-neu" />
       <div className="nav_1">
         <div className="list">
           <ul className="point">Home</ul>

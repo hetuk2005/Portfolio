@@ -8,18 +8,15 @@
 body {
     min-height: 100vh;
     background:
-        radial-gradient(ellipse at 35% 0%,
-            #a52bc0 0%,
-            transparent 45%),
-        radial-gradient(ellipse at 100% 5%,
-            #526bc5 0%,
-            transparent 40%),
-        radial-gradient(ellipse at 0% 100%,
-            #26adb5 0%,
-            transparent 45%),
-        linear-gradient(135deg,
-            #537bc9 0%,
-            #37c5a5 100%);
+        radial-gradient(ellipse at 35% 0%, #a52bc0 0%, transparent 45%),
+            radial-gradient(ellipse at 100% 5%, #526bc5 0%, transparent 40%),
+            radial-gradient(ellipse at 0% 100%, #26adb5 0%, transparent 45%),
+            linear-gradient(135deg, #537bc9 0%, #37c5a5 100%);
+        }
+        
+        .portfolio-app {
+            position: relative;
+            min-height: 100vh;
 }
 
 .background {

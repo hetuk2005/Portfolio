@@ -40,6 +40,7 @@
     object-fit: contain;
     margin-left: 2rem;
 }
+
 .list>ul {
     list-style: none;
     cursor: pointer;
@@ -125,4 +126,127 @@
 .img_ring {
     left: 55%;
     z-index: 999;
+}
+/* =====================================
+   NEUMORPHISM THEME
+===================================== */
+
+.portfolio-app[data-theme="neumorphism"] .glass {
+    background: #e7e8f6;
+    border: none;
+    border-radius: 2.1rem;
+
+    box-shadow:
+        13px 13px 25px #c5c6d5,
+        -13px -13px 25px #ffffff;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    transition: all 0.5s ease;
+}
+
+/* Navbar */
+
+.portfolio-app[data-theme="neumorphism"] .navbar {
+    color: #414365;
+}
+
+.portfolio-app[data-theme="neumorphism"] .list>ul {
+    color: #414365;
+    transition: all 0.3s ease;
+}
+
+.portfolio-app[data-theme="neumorphism"] .list>ul:hover,
+.portfolio-app[data-theme="neumorphism"] .list>.point {
+    color: #8060dc;
+}
+
+/* Navbar Hire Me button */
+
+.portfolio-app[data-theme="neumorphism"] .hire_me>button {
+    background: #e7e8f6;
+    color: #7655d6;
+    border: none;
+    border-radius: 13px;
+
+    box-shadow:
+        5px 5px 10px #c5c6d5,
+        -5px -5px 10px #ffffff;
+}
+
+.portfolio-app[data-theme="neumorphism"] .hire_me>button:hover {
+    box-shadow:
+        inset 5px 5px 9px #c5c6d5,
+        inset -5px -5px 9px #ffffff;
+}
+
+/* Main introduction */
+
+.portfolio-app[data-theme="neumorphism"] .hello {
+    color: #343651;
+}
+
+.portfolio-app[data-theme="neumorphism"] .name {
+    color: #df803d;
+}
+
+.portfolio-app[data-theme="neumorphism"] .home_content>p {
+    color: #555873;
+}
+
+/* Main Hire Me button */
+
+.portfolio-app[data-theme="neumorphism"] .home_content>button {
+    background: #e7e8f6;
+    color: #8060dc;
+    border: none;
+    border-radius: 19px;
+
+    box-shadow:
+        7px 7px 15px #c5c6d5,
+        -7px -7px 15px #ffffff;
+}
+
+.portfolio-app[data-theme="neumorphism"] .home_content>button:hover {
+    box-shadow:
+        inset 5px 5px 10px #c5c6d5,
+        inset -5px -5px 10px #ffffff;
+}
+
+/* Decorative ring */
+
+.portfolio-app[data-theme="neumorphism"] .img_ring {
+    filter: drop-shadow(3px 5px 5px rgba(128, 96, 220, 0.25));
+}
+
+/* Logo Theme Switching */
+
+.logo-container {
+    position: relative;
+    width: 4.3rem;
+    height: 4.3rem;
+    margin-left: 2rem;
+}
+
+.logo-container .img_logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Default: Glassmorphism */
+
+.logo-neumorphism {
+    display: none;
+}
+
+/* Neumorphism */
+
+.portfolio-app[data-theme="neumorphism"] .logo-glass {
+    display: none;
+}
+
+.portfolio-app[data-theme="neumorphism"] .logo-neu {
+    display: block;
 }
