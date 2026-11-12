@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+
 import "./App.css";
 import { Home } from "./Pages/home";
-import { ThemeSwitcher } from "./Components/ThemeSwitcher";
+import { BentoHome } from "./Components/bentoHome";
+import { ThemeSwitcher } from "./Components/themeSwitcher";
 
 const themes = [
   "glassmorphism",
@@ -39,9 +41,13 @@ function App() {
       <div className="background"></div>
       <div className="background1"></div>
       <div className="background2"></div>
-      <main className="glass">
-        <Home />
-      </main>
+      {theme === "bento-ui" ? (
+        <BentoHome />
+      ) : (
+        <main className="glass">
+          <Home />
+        </main>
+      )}
       <ThemeSwitcher theme={theme} onThemeChange={setTheme} />
     </div>
   );

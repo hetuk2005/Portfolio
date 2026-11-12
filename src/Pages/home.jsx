@@ -1,5 +1,5 @@
 import "../Style/home.css";
-import { Navbar } from "./navbar";
+import { Navbar } from "../Components/navbar";
 
 export const Home = () => {
   return (
