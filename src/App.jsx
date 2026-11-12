@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Home } from "./Pages/home";
 import { BentoHome } from "./Components/bentoHome";
+import { ClayHome } from "./Components/clayHome";
 import { ThemeSwitcher } from "./Components/themeSwitcher";
 
 const themes = [
@@ -41,7 +42,9 @@ function App() {
       <div className="background"></div>
       <div className="background1"></div>
       <div className="background2"></div>
-      {theme === "bento-ui" ? (
+      {theme === "claymorphism" ? (
+        <ClayHome />
+      ) : theme === "bento-ui" ? (
         <BentoHome />
       ) : (
         <main className="glass">
