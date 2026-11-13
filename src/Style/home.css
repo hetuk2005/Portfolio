@@ -68,6 +68,7 @@
 .portfolio-app[data-theme="bento-ui"] .hire_me>button:hover {
     scale: 1.05;
 }
+
 /* Content */
 
 .home_content {
@@ -237,5 +238,15 @@
 }
 
 .portfolio-app[data-theme="neumorphism"] .logo-neu {
+    display: block;
+}
+
+/* Claymorphism */
+
+.portfolio-app[data-theme="claymorphism"] .logo-glass {
+    display: none;
+}
+
+.portfolio-app[data-theme="claymorphism"] .logo-neu {
     display: block;
 }
